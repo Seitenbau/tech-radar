@@ -9,6 +9,11 @@ This repository contains the code to generate the visualization:
 [`radar.js`](/docs/radar.js) (based on [d3.js v4](https://d3js.org)).
 Feel free to use and adapt it for your own purposes.
 
+## Docker usage
+```bash
+docker pull Seitenbau/techradar
+docker run -it -d -p 80:80 --name=techradar -e NGINX_HOST=localhost -v $(pwd)/config:/var/www/techradar/config seitenbau/techradar
+```
 ## Usage
 
 1. include `d3.js` and `radar.js`:
